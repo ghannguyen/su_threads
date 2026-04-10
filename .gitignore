@@ -1,0 +1,11 @@
+.DS_Store
+*.user
+*.suo
+*.db
+*.db-shm
+*.db-wal
+
+**/bin/
+**/obj/
+
+Archive.Web/wwwroot/uploads/

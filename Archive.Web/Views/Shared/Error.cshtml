@@ -1,0 +1,20 @@
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Đã có lỗi";
+}
+
+<section class="page-shell narrow-page">
+    <div class="archive-card empty-state-card text-center">
+        <span class="empty-badge">500</span>
+        <h1>Oops, ARCHIVE vừa gặp một trục trặc nhỏ</h1>
+        <p>Ứng dụng vẫn đang chạy theo mô hình MVC, nhưng yêu cầu này vừa chạm vào một lỗi chưa xử lý xong.</p>
+        @if (!string.IsNullOrEmpty(Model?.RequestId))
+        {
+            <p class="small text-muted mb-4"><strong>Request ID:</strong> <code>@Model.RequestId</code></p>
+        }
+        <a asp-controller="Home" asp-action="Index" class="btn btn-soft rounded-pill px-4">
+            <svg class="icon"><use href="#i-home"></use></svg>
+            <span>Về trang chủ</span>
+        </a>
+    </div>
+</section>
